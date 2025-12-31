@@ -102,6 +102,25 @@ gsc drops --days 14
 gsc drops --csv drops.csv
 ```
 
+### List Sites
+
+```bash
+# Show all sites you have access to
+gsc sites
+```
+
+This displays the exact site URL format to use.
+
+### Configuration
+
+```bash
+# Set default site
+gsc config set-site sc-domain:example.com
+
+# Show current config
+gsc config show
+```
+
 ### Authentication
 
 ```bash

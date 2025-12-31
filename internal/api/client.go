@@ -18,6 +18,11 @@ type Client struct {
 	siteURL string
 }
 
+// NewClientForSites creates a client for listing sites (no site URL required)
+func NewClientForSites() (*Client, error) {
+	return NewClient("")
+}
+
 // NewClient creates a new Search Console API client
 func NewClient(siteURL string) (*Client, error) {
 	clientSecretPath := config.GetClientSecretPath()

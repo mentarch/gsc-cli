@@ -71,6 +71,8 @@ To get started:
 
 	// Add commands
 	cmd.AddCommand(newAuthCmd())
+	cmd.AddCommand(newSitesCmd())
+	cmd.AddCommand(newConfigCmd())
 	cmd.AddCommand(newQueriesCmd())
 	cmd.AddCommand(newCompareCmd())
 	cmd.AddCommand(newDropsCmd())
