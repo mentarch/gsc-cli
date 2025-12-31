@@ -3,9 +3,9 @@ package cmd
 import (
 	"fmt"
 
-	"gsc-cli/internal/api"
-	"gsc-cli/internal/config"
-	"gsc-cli/internal/output"
+	"github.com/sivori/gsc-cli/internal/api"
+	"github.com/sivori/gsc-cli/internal/config"
+	"github.com/sivori/gsc-cli/internal/output"
 
 	"github.com/spf13/cobra"
 )

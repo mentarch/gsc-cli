@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gsc-cli/internal/cmd"
+	"github.com/sivori/gsc-cli/internal/cmd"
 )
 
 func main() {

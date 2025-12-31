@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"gsc-cli/internal/api"
+	"github.com/sivori/gsc-cli/internal/api"
 )
 
 // JSONQueryResult represents query results in JSON format

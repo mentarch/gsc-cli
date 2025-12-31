@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"gsc-cli/internal/config"
+	"github.com/sivori/gsc-cli/internal/config"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"

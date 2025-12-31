@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"gsc-cli/internal/api"
+	"github.com/sivori/gsc-cli/internal/api"
 )
 
 // WriteQueryResultCSV writes query results to a CSV file

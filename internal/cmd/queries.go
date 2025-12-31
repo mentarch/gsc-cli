@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"gsc-cli/internal/api"
-	"gsc-cli/internal/output"
+	"github.com/sivori/gsc-cli/internal/api"
+	"github.com/sivori/gsc-cli/internal/output"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"

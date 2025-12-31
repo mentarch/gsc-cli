@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"gsc-cli/internal/auth"
-	"gsc-cli/internal/config"
+	"github.com/sivori/gsc-cli/internal/auth"
+	"github.com/sivori/gsc-cli/internal/config"
 
 	"golang.org/x/oauth2"
 	"google.golang.org/api/option"

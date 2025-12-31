@@ -1,4 +1,4 @@
-module gsc-cli
+module github.com/sivori/gsc-cli
 
 go 1.25.5
 
