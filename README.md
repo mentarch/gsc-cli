@@ -1,5 +1,9 @@
 # gsc-cli
 
+[![Go Version](https://img.shields.io/github/go-mod/go-version/sivori/gsc-cli)](https://go.dev/)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sivori/gsc-cli)](https://goreportcard.com/report/github.com/sivori/gsc-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Query Google Search Console from the terminal. Pull top queries, compare date ranges, export CSVs, and flag ranking drops.
 
 ## Installation
