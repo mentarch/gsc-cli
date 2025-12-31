@@ -170,10 +170,10 @@ func GetValidToken(clientSecretPath string) (*oauth2.Token, error) {
 
 // TokenInfo returns basic info about the stored token
 type TokenInfo struct {
-	HasToken    bool
-	Expiry      time.Time
-	IsExpired   bool
-	TokenType   string
+	HasToken  bool
+	Expiry    time.Time
+	IsExpired bool
+	TokenType string
 }
 
 // GetTokenInfo returns information about the stored token

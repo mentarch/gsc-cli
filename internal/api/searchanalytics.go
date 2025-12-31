@@ -39,10 +39,10 @@ type QueryRow struct {
 
 // QueryResult represents the result of a Search Analytics query
 type QueryResult struct {
-	Rows       []QueryRow
-	TotalRows  int
-	StartDate  string
-	EndDate    string
+	Rows      []QueryRow
+	TotalRows int
+	StartDate string
+	EndDate   string
 }
 
 // Query executes a Search Analytics query
@@ -162,7 +162,7 @@ func (c *Client) QueryAll(req QueryRequest) (*QueryResult, error) {
 // DefaultDateRange returns the default date range (last 28 days)
 func DefaultDateRange() (start, end string) {
 	now := time.Now()
-	end = now.AddDate(0, 0, -3).Format("2006-01-02") // 3 days ago (data delay)
+	end = now.AddDate(0, 0, -3).Format("2006-01-02")    // 3 days ago (data delay)
 	start = now.AddDate(0, 0, -30).Format("2006-01-02") // 30 days ago
 	return
 }
@@ -177,10 +177,10 @@ func DateRangeForDays(days int) (start, end string) {
 
 // ComparisonPeriod represents two date ranges for comparison
 type ComparisonPeriod struct {
-	CurrentStart string
-	CurrentEnd   string
+	CurrentStart  string
+	CurrentEnd    string
 	PreviousStart string
-	PreviousEnd  string
+	PreviousEnd   string
 }
 
 // GetComparisonPeriod returns date ranges for week-over-week or month-over-month comparison

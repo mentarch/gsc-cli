@@ -13,14 +13,14 @@ import (
 
 func newCompareCmd() *cobra.Command {
 	var (
-		period      string
-		fromStart   string
-		fromEnd     string
-		toStart     string
-		toEnd       string
-		limit       int
-		csvFile     string
-		sortBy      string
+		period    string
+		fromStart string
+		fromEnd   string
+		toStart   string
+		toEnd     string
+		limit     int
+		csvFile   string
+		sortBy    string
 	)
 
 	cmd := &cobra.Command{
@@ -179,16 +179,16 @@ func buildComparison(current, previous []api.QueryRow) []output.ComparisonRow {
 		prev := prevMap[query]
 
 		row := output.ComparisonRow{
-			Query:              query,
-			CurrentClicks:      curr.Clicks,
-			PreviousClicks:     prev.Clicks,
-			ClicksDelta:        curr.Clicks - prev.Clicks,
-			CurrentImpressions: curr.Impressions,
+			Query:               query,
+			CurrentClicks:       curr.Clicks,
+			PreviousClicks:      prev.Clicks,
+			ClicksDelta:         curr.Clicks - prev.Clicks,
+			CurrentImpressions:  curr.Impressions,
 			PreviousImpressions: prev.Impressions,
-			ImpressionsDelta:   curr.Impressions - prev.Impressions,
-			CurrentPosition:    curr.Position,
-			PreviousPosition:   prev.Position,
-			PositionDelta:      curr.Position - prev.Position,
+			ImpressionsDelta:    curr.Impressions - prev.Impressions,
+			CurrentPosition:     curr.Position,
+			PreviousPosition:    prev.Position,
+			PositionDelta:       curr.Position - prev.Position,
 		}
 
 		// Calculate percentage changes

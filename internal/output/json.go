@@ -57,9 +57,9 @@ func PrintQueryResultJSON(result *api.QueryResult) error {
 
 // JSONComparisonResult represents comparison results in JSON format
 type JSONComparisonResult struct {
-	CurrentPeriod  Period               `json:"current_period"`
-	PreviousPeriod Period               `json:"previous_period"`
-	Rows           []JSONComparisonRow  `json:"rows"`
+	CurrentPeriod  Period              `json:"current_period"`
+	PreviousPeriod Period              `json:"previous_period"`
+	Rows           []JSONComparisonRow `json:"rows"`
 }
 
 // Period represents a date range
@@ -70,18 +70,18 @@ type Period struct {
 
 // JSONComparisonRow represents a comparison row in JSON format
 type JSONComparisonRow struct {
-	Query              string  `json:"query"`
-	CurrentClicks      float64 `json:"current_clicks"`
-	PreviousClicks     float64 `json:"previous_clicks"`
-	ClicksDelta        float64 `json:"clicks_delta"`
-	ClicksPercent      float64 `json:"clicks_percent"`
-	CurrentImpressions float64 `json:"current_impressions"`
+	Query               string  `json:"query"`
+	CurrentClicks       float64 `json:"current_clicks"`
+	PreviousClicks      float64 `json:"previous_clicks"`
+	ClicksDelta         float64 `json:"clicks_delta"`
+	ClicksPercent       float64 `json:"clicks_percent"`
+	CurrentImpressions  float64 `json:"current_impressions"`
 	PreviousImpressions float64 `json:"previous_impressions"`
-	ImpressionsDelta   float64 `json:"impressions_delta"`
-	ImpressionsPercent float64 `json:"impressions_percent"`
-	CurrentPosition    float64 `json:"current_position"`
-	PreviousPosition   float64 `json:"previous_position"`
-	PositionDelta      float64 `json:"position_delta"`
+	ImpressionsDelta    float64 `json:"impressions_delta"`
+	ImpressionsPercent  float64 `json:"impressions_percent"`
+	CurrentPosition     float64 `json:"current_position"`
+	PreviousPosition    float64 `json:"previous_position"`
+	PositionDelta       float64 `json:"position_delta"`
 }
 
 // PrintComparisonJSON prints comparison results as JSON
@@ -94,18 +94,18 @@ func PrintComparisonJSON(currentPeriod, previousPeriod Period, rows []Comparison
 
 	for i, row := range rows {
 		output.Rows[i] = JSONComparisonRow{
-			Query:              row.Query,
-			CurrentClicks:      row.CurrentClicks,
-			PreviousClicks:     row.PreviousClicks,
-			ClicksDelta:        row.ClicksDelta,
-			ClicksPercent:      row.ClicksPercent,
-			CurrentImpressions: row.CurrentImpressions,
+			Query:               row.Query,
+			CurrentClicks:       row.CurrentClicks,
+			PreviousClicks:      row.PreviousClicks,
+			ClicksDelta:         row.ClicksDelta,
+			ClicksPercent:       row.ClicksPercent,
+			CurrentImpressions:  row.CurrentImpressions,
 			PreviousImpressions: row.PreviousImpressions,
-			ImpressionsDelta:   row.ImpressionsDelta,
-			ImpressionsPercent: row.ImpressionsPercent,
-			CurrentPosition:    row.CurrentPosition,
-			PreviousPosition:   row.PreviousPosition,
-			PositionDelta:      row.PositionDelta,
+			ImpressionsDelta:    row.ImpressionsDelta,
+			ImpressionsPercent:  row.ImpressionsPercent,
+			CurrentPosition:     row.CurrentPosition,
+			PreviousPosition:    row.PreviousPosition,
+			PositionDelta:       row.PositionDelta,
 		}
 	}
 

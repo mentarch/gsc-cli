@@ -13,11 +13,11 @@ import (
 
 func newDropsCmd() *cobra.Command {
 	var (
-		threshold  float64
-		minClicks  float64
-		days       int
-		limit      int
-		csvFile    string
+		threshold float64
+		minClicks float64
+		days      int
+		limit     int
+		csvFile   string
 	)
 
 	cmd := &cobra.Command{
@@ -179,12 +179,12 @@ func findDrops(current, previous []api.QueryRow, threshold, minClicks float64) [
 			// Only include if it had significant previous position
 			if prev.Position <= 20 && prev.Impressions >= 100 {
 				drops = append(drops, output.DropsRow{
-					Query:            query,
-					CurrentPosition:  100, // Treat as dropped out
-					PreviousPosition: prev.Position,
-					PositionDrop:     100 - prev.Position,
-					CurrentClicks:    0,
-					PreviousClicks:   prev.Clicks,
+					Query:              query,
+					CurrentPosition:    100, // Treat as dropped out
+					PreviousPosition:   prev.Position,
+					PositionDrop:       100 - prev.Position,
+					CurrentClicks:      0,
+					PreviousClicks:     prev.Clicks,
 					CurrentImpressions: 0,
 				})
 			}
@@ -196,12 +196,12 @@ func findDrops(current, previous []api.QueryRow, threshold, minClicks float64) [
 
 		if drop >= threshold {
 			drops = append(drops, output.DropsRow{
-				Query:            query,
-				CurrentPosition:  curr.Position,
-				PreviousPosition: prev.Position,
-				PositionDrop:     drop,
-				CurrentClicks:    curr.Clicks,
-				PreviousClicks:   prev.Clicks,
+				Query:              query,
+				CurrentPosition:    curr.Position,
+				PreviousPosition:   prev.Position,
+				PositionDrop:       drop,
+				CurrentClicks:      curr.Clicks,
+				PreviousClicks:     prev.Clicks,
 				CurrentImpressions: curr.Impressions,
 			})
 		}

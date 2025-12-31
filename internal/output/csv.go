@@ -76,18 +76,18 @@ func WriteQueryResultCSV(filename string, result *api.QueryResult, dimensions []
 
 // ComparisonRow represents a comparison between two periods
 type ComparisonRow struct {
-	Query             string
-	CurrentClicks     float64
-	PreviousClicks    float64
-	ClicksDelta       float64
-	ClicksPercent     float64
-	CurrentImpressions float64
+	Query               string
+	CurrentClicks       float64
+	PreviousClicks      float64
+	ClicksDelta         float64
+	ClicksPercent       float64
+	CurrentImpressions  float64
 	PreviousImpressions float64
-	ImpressionsDelta   float64
-	ImpressionsPercent float64
-	CurrentPosition   float64
-	PreviousPosition  float64
-	PositionDelta     float64
+	ImpressionsDelta    float64
+	ImpressionsPercent  float64
+	CurrentPosition     float64
+	PreviousPosition    float64
+	PositionDelta       float64
 }
 
 // WriteComparisonCSV writes comparison results to a CSV file
@@ -138,12 +138,12 @@ func WriteComparisonCSV(filename string, rows []ComparisonRow) error {
 
 // DropsRow represents a query with ranking drops
 type DropsRow struct {
-	Query           string
-	CurrentPosition float64
-	PreviousPosition float64
-	PositionDrop    float64
-	CurrentClicks   float64
-	PreviousClicks  float64
+	Query              string
+	CurrentPosition    float64
+	PreviousPosition   float64
+	PositionDrop       float64
+	CurrentClicks      float64
+	PreviousClicks     float64
 	CurrentImpressions float64
 }
 
