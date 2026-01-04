@@ -76,6 +76,7 @@ To get started:
 	cmd.AddCommand(newQueriesCmd())
 	cmd.AddCommand(newCompareCmd())
 	cmd.AddCommand(newDropsCmd())
+	cmd.AddCommand(newPagesCmd())
 	cmd.AddCommand(newVersionCmd())
 	cmd.AddCommand(newCompletionCmd())
 
